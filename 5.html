@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Elements</title>
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Moving Element Example</h1>
+    <div id="box"></div>
+    <button onclick="moveRight()">Move Right</button>
+    <script>
+        function moveRight() {
+            const box = document.getElementById('box');
+            const currentLeft = parseInt(window.getComputedStyle(box).left);
+            box.style.left = currentLeft + 10 + 'px';
+        }
+    </script>
+</body>
+</html>

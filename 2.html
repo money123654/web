@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and JavaScript</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript in HTML</h1>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
+    <script>
+        function showMessage() {
+            const messageElement = document.getElementById('message');
+            if (messageElement.innerText === "") {
+                messageElement.innerText = "Hello, this message is from JavaScript!";
+            } else {
+                messageElement.innerText = "";
+            }
+        }
+    </script>
+</body>
+</html>
